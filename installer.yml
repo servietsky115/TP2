@@ -1,0 +1,9 @@
+- hosts: serveurs
+  tasks:
+    - name: Installation de lynx
+      become: true
+      become_user: root
+      apt:
+        name: lynx
+        state: present
+        update_cache: true
